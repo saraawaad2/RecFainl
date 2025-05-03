@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_17">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/back"
+        android:layout_margin="12dp"
+        android:contentDescription="Back Button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diary"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="28dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/back_button"/>
+
+    <!-- Card 1: Write Something New -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_write"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="70dp"
+        android:layout_below="@+id/titleText"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/write_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/img_15" />
+
+            <TextView
+                android:id="@+id/write_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Write Something New"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/lavender"
+                android:layout_below="@id/write_img"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Card 2: Blog -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_blog"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="70dp"
+        android:layout_below="@+id/card_write"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/blog_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/img_8" />
+
+            <TextView
+                android:id="@+id/blog_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blog"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/lavender"
+                android:layout_below="@id/blog_img"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

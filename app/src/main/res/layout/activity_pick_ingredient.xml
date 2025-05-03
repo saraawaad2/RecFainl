@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/img_17">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back"
+            android:contentDescription="Back Button"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick Ingredient"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- ========== MEAT ========== -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Meat"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#A52A2A"
+                    android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/meat_group"
+                    app:singleSelection="false"
+                    app:chipSpacing="8dp">
+
+                    <com.google.android.material.chip.Chip android:id="@+id/chip_beef" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Beef"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/chip_lamb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lamb"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/chip_salmon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Salmon"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/chip_chicken" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Chicken"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/chip_turkey" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Turkey"/>
+                </com.google.android.material.chip.ChipGroup>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ========== VEGETABLES ========== -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vegetables"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#4CAF50"
+                    android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="false"
+                    android:id="@+id/vegetable_group"
+                    app:chipSpacing="8dp">
+
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_tomato" android:layout_height="wrap_content" android:text="Tomato" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_pepper" android:layout_height="wrap_content" android:text="Pepper" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_cabbage" android:layout_height="wrap_content" android:text="Cabbage" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_zucchini" android:layout_height="wrap_content" android:text="Zucchini" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_carrot" android:layout_height="wrap_content" android:text="Carrot" />
+
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ========== FRUITS ========== -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fruits"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#FF9800"
+                    android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="false"
+                    android:id="@+id/fruit_group"
+                    app:chipSpacing="8dp">
+
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_banana" android:layout_height="wrap_content" android:text="Banana" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_apple" android:layout_height="wrap_content" android:text="Apple" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_orange" android:layout_height="wrap_content" android:text="Orange" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_grapes" android:layout_height="wrap_content" android:text="Grapes" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_strawberry" android:layout_height="wrap_content" android:text="Strawberry" />
+
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ========== DAIRY ========== -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dairy"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#3F51B5"
+                    android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="false"
+                    android:id="@+id/diary_group"
+                    app:chipSpacing="8dp">
+
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_milk" android:layout_height="wrap_content" android:text="Milk" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_cheese" android:layout_height="wrap_content" android:text="Cheese" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_butter" android:layout_height="wrap_content" android:text="Butter" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_cream" android:layout_height="wrap_content" android:text="Cream" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_yogurt" android:layout_height="wrap_content" android:text="Yogurt" />
+
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ========== SEASONING ========== -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="32dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seasoning"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="#9C27B0"
+                    android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="false"
+                    android:id="@+id/seasoning_group"
+                    app:chipSpacing="8dp">
+
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_salt" android:layout_height="wrap_content" android:text="Salt" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_sugar" android:layout_height="wrap_content" android:text="Sugar" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_pepper_seasoning" android:layout_height="wrap_content" android:text="Pepper" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_oregano" android:layout_height="wrap_content" android:text="Oregano" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_paprika" android:layout_height="wrap_content" android:text="Paprika" />
+                    <com.google.android.material.chip.Chip android:layout_width="wrap_content" android:id="@+id/chip_beefgarlic_powder" android:layout_height="wrap_content" android:text="Garlic Powder" />
+
+                </com.google.android.material.chip.ChipGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search for a Recipe"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:padding="12dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</ScrollView>
