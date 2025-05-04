@@ -90,12 +90,6 @@ public class Write extends AppCompatActivity {
             imageBitmap = null;
             imagePreviewContainer.setVisibility(View.GONE);
         });
-        PackageManager pm = getPackageManager();
-        if (!pm.hasSystemFeature(PackageManager.FEATURE_CAMERA_ANY)) {
-            Toast.makeText(this, "This device has no camera.", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
 
         saveBtn.setOnClickListener(v -> saveRecipe());
 
